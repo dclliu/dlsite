@@ -9,7 +9,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import ResponsiveDrawer from './ResponsiveDrawer.jsx';
 import { makeStyles, MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import TreeImg from './constants/test1.jpg';
-
+import Copyright from './Copyright';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -64,6 +64,7 @@ function App() {
               <Resume />
             </Route>
           </Switch>
+          <Copyright />
         </main>
       </div >
     </BrowserRouter>

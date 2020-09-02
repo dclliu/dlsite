@@ -79,12 +79,13 @@ const useStyles = makeStyles((theme) => ({
   // necessary for content to be below app bar
   toolbar: {
     background: theme.palette.primary.light,
+    
     ...theme.mixins.toolbar,
   },
   drawerPaper: {
     width: drawerWidth,
     color: "black",
-    background: theme.palette.primary.main,
+    background: theme.palette.grey[300],
   },
   drawerPaperTransparent: {
     width: drawerWidth,
@@ -95,6 +96,9 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
     padding: theme.spacing(3),
   },
+  otherToolbar: {
+    display: "flex",
+  }
 }));
 
 function ResponsiveDrawer(props) {
@@ -115,24 +119,25 @@ function ResponsiveDrawer(props) {
   const drawer = (
     <div>
       <div className={classes.toolbar} />
-      <Divider />
-      <ProfilePhoto />
-      <Divider />
-      <List>
-        {['Home', 'About', 'Resume'].map((text, index) => (
-          <ListItemLink
-            to={text === 'Home' ? '/' : "/".concat(text)}
-            primary={text}
-            icon={iconMap[text]}
-          />
-        ))}
-      </List>
-      <Divider />
+      <div>
+        <Divider />
+        <ProfilePhoto />
+        <Divider />
+        <List>
+          {['Home', 'About', 'Resume'].map((text, index) => (
+            <ListItemLink
+              to={text === 'Home' ? '/' : "/".concat(text)}
+              primary={text}
+              icon={iconMap[text]}
+            />
+          ))}
+        </List>
+        <Divider />
 
-      <List>
-        <Contact />
-      </List>
-
+        <List>
+          <Contact />
+        </List>
+      </div>
     </div>
   );
 
