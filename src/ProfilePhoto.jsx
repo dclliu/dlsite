@@ -1,5 +1,7 @@
 import React from 'react';
 import Box from '@material-ui/core/Box';
+import Fade from '@material-ui/core/Fade';
+import { useEffect } from "react";
 
 const defaultProps = {
   borderColor: 'text.primary',
@@ -10,7 +12,19 @@ const defaultProps = {
 };
 
 export default function ProfilePhoto() {
+
+  const [checked, setChecked] = React.useState(false);
+
+  const handleChange = () => {
+    setChecked((prev) => !prev);
+  };
+  useEffect(() => {
+    handleChange();
+  }, []);
+
+
   return (
+    <Fade in={checked} timeout={6000}>
     <Box display="flex" justifyContent="center">
       <Box
         component="img"
@@ -19,5 +33,6 @@ export default function ProfilePhoto() {
         {...defaultProps}
       />
     </Box>
+    </Fade>
   );
 }
