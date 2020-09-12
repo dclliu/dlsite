@@ -1,7 +1,6 @@
 {
-    "hosting": {
-	"site": "danieliu",
-      "public": "./build",
+  "hosting": {
+    "public": "./build",
     "ignore": [
       "firebase.json",
       "**/.*",
