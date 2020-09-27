@@ -51,6 +51,16 @@ const Resume = () => {
           Multivariable Calculus and Linear Algebra; Probability Theory.
           </Typography>
         </Typography>
+
+        <Box p={1}></Box>
+
+        <Typography variant="subtitle1" style = {{fontWeight: "bold"}}>
+          Clubs and Activities: &nbsp;
+          <Typography variant="subtitle1" color = "primary" display = "inline">
+          Yale Helix Healthcare Startup Incubator; LILY NLP Lab; Yale Süperfly.
+          </Typography>
+        </Typography>
+
         <Box p={3}></Box>
 
         <Typography variant="h4" gutterBottom>
